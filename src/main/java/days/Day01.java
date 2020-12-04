@@ -4,14 +4,13 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
+import java.util.*;
 
 public class Day01 extends Day {
 
     private final int sum = 2020;
     private int firstNbr = 0;
     private int secondNbr = 0;
-    private int thirdNbr = 0;
     private String[] lines;
 
     @Override
@@ -30,15 +29,15 @@ public class Day01 extends Day {
     @Override
     public void challenge01() {
         this.executeChallenge(() -> {
+            Map<Integer, Integer> numMap = new HashMap<>();
             for (int i = 0; i < this.lines.length; i++) {
-                this.firstNbr = Integer.parseInt(this.lines[i]);
-                for (int j = i + 1; j < this.lines.length; j++) {
-                    this.secondNbr = Integer.parseInt(this.lines[j]);
-
-                    if (this.firstNbr + this.secondNbr == this.sum) {
-                        setFirstResult(String.valueOf(this.firstNbr * this.secondNbr));
-                        return;
-                    }
+                int line = Integer.parseInt(this.lines[i]);
+                int complement = this.sum - line;
+                if (numMap.containsKey(complement)) {
+                    setFirstResult(String.valueOf(line * complement));
+                    break;
+                } else {
+                    numMap.put(line, i);
                 }
             }
         });
@@ -48,17 +47,16 @@ public class Day01 extends Day {
     public void challenge02() {
         this.executeChallenge(() -> {
             for (int i = 0; i < this.lines.length; i++) {
-                firstNbr = Integer.parseInt(this.lines[i]);
+                this.firstNbr = Integer.parseInt(this.lines[i]);
+                int currentTarget = this.sum - firstNbr;
+                Set<Integer> existingNums = new HashSet<>();
                 for (int j = i + 1; j < this.lines.length; j++) {
-                    secondNbr = Integer.parseInt(this.lines[j]);
-
-                    for (int k = j + 1; k < this.lines.length; k++) {
-                        thirdNbr = Integer.parseInt(this.lines[k]);
-
-                        if (firstNbr + secondNbr + thirdNbr == this.sum) {
-                            setSecondResult(String.valueOf(firstNbr * secondNbr * thirdNbr));
-                            return;
-                        }
+                    this.secondNbr = Integer.parseInt(this.lines[j]);
+                    if (existingNums.contains(currentTarget - this.secondNbr)) {
+                        setSecondResult(String.valueOf(this.firstNbr * this.secondNbr * (currentTarget - this.secondNbr)));
+                        break;
+                    } else {
+                        existingNums.add(Integer.parseInt(this.lines[j]));
                     }
                 }
             }
