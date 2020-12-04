@@ -1,2 +1,6 @@
+days/Day.java
+ days.Day
 Main.java
  Main
+days/Day01.java
+ days.Day01
