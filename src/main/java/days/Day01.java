@@ -31,7 +31,6 @@ public class Day01 extends Day {
         }
     }
 
-
     @Override
     public void challenge02() {
         try {

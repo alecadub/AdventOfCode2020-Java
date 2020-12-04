@@ -1,6 +1,10 @@
 days/Day.java
  days.Day
-Main.java
- Main
 days/Day01.java
  days.Day01
+days/executeChallengeSpecifics.java
+ days.executeChallengeSpecifics
+Main.java
+ Main
+days/Day02.java
+ days.Day02

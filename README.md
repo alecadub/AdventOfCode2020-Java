@@ -1,2 +1,5 @@
 # AdventOfCode2020-Java
-Solutions to the advent of code 2020 in java
+
+Solutions for adventofcode challenges (WIP) in java!
+
+Check it out here: https://adventofcode.com/2020
