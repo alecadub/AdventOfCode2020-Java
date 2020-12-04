@@ -9,6 +9,8 @@ public abstract class Day {
         printResults();
     }
 
+    public abstract void executeChallenge(executeChallengeSpecifics function);
+
     public abstract void challenge01();
 
     public abstract void challenge02();

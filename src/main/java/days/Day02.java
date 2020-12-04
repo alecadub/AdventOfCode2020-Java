@@ -15,6 +15,7 @@ public class Day02 extends Day {
     private char passwordChar;
     private String[] splitLine = {"", "", ""};
 
+    @Override
     public void executeChallenge(executeChallengeSpecifics function) {
         try {
             List<String> lines = Files.readAllLines(Paths.get("src/main/resources/day02.txt"), StandardCharsets.UTF_8);
