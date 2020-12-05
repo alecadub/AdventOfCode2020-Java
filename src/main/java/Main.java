@@ -1,6 +1,7 @@
 import days.Day01;
 import days.Day02;
 import days.Day03;
+import days.Day04;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,5 +16,9 @@ public class Main {
         Day03 day03 = new Day03();
         System.out.println("Day 3 results:");
         day03.run();
+
+        Day04 day04 = new Day04();
+        System.out.println("Day 4 results");
+        day04.run();
     }
 }
