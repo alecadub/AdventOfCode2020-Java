@@ -21,5 +21,9 @@ public class Main {
         Day05 day05 = new Day05();
         System.out.println("Day 5 results:");
         day05.run();
+
+        Day06 day06 = new Day06();
+        System.out.println("Day 6 results:");
+        day06.run();
     }
 }
