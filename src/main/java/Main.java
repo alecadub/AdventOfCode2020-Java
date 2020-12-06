@@ -1,7 +1,4 @@
-import days.Day01;
-import days.Day02;
-import days.Day03;
-import days.Day04;
+import days.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,5 +17,9 @@ public class Main {
         Day04 day04 = new Day04();
         System.out.println("Day 4 results");
         day04.run();
+
+        Day05 day05 = new Day05();
+        System.out.println("Day 5 results:");
+        day05.run();
     }
 }
