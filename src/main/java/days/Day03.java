@@ -14,7 +14,7 @@ public class Day03 extends Day {
     private int numberOfTrees = 0;
 
     @Override
-    public void executeChallenge(executeChallengeSpecifics function) {
+    public void executeChallenge(ExecuteChallengeSpecifics function) {
         function.run();
 
         Scanner sc = null;

@@ -14,7 +14,7 @@ public class Day01 extends Day {
     private String[] lines;
 
     @Override
-    public void executeChallenge(executeChallengeSpecifics function) {
+    public void executeChallenge(ExecuteChallengeSpecifics function) {
         try {
             List<String> lines = Files.readAllLines(Paths.get("src/main/resources/day01.txt"), StandardCharsets.UTF_8);
             String[] linesArray = new String[lines.size()];

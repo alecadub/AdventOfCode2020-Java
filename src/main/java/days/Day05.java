@@ -12,7 +12,7 @@ public class Day05 extends Day {
     private ArrayList<Integer> ids = new ArrayList<Integer>();
 
     @Override
-    public void executeChallenge(executeChallengeSpecifics function) {
+    public void executeChallenge(ExecuteChallengeSpecifics function) {
 
         Scanner sc = null;
 

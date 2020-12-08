@@ -9,7 +9,7 @@ public abstract class Day {
         printResults();
     }
 
-    public abstract void executeChallenge(executeChallengeSpecifics function);
+    public abstract void executeChallenge(ExecuteChallengeSpecifics function);
 
     public abstract void challenge01();
 

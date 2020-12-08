@@ -14,7 +14,7 @@ public class Day06 extends Day {
     private final Map<Character, int[]> charMap = new HashMap<Character, int[]>();
 
     @Override
-    public void executeChallenge(executeChallengeSpecifics function) {
+    public void executeChallenge(ExecuteChallengeSpecifics function) {
         Scanner sc = null;
 
         try {

@@ -16,7 +16,7 @@ public class Day04 extends Day {
     private int numberOfGoodPassport;
 
     @Override
-    public void executeChallenge(executeChallengeSpecifics function) {
+    public void executeChallenge(ExecuteChallengeSpecifics function) {
         this.seedHashMap();
         try {
             this.lines = Files.readAllLines(Paths.get("src/main/resources/day04.txt"), StandardCharsets.UTF_8);
