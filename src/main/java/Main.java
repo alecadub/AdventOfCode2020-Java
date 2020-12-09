@@ -34,5 +34,9 @@ public class Main {
         Day08 day08 = new Day08();
         System.out.println("Day 8 results:");
         day08.run();
+
+        Day09 day09 = new Day09();
+        System.out.println("Day 9 results:");
+        day09.run();
     }
 }
